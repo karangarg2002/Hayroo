@@ -73,6 +73,13 @@ app.use("/api", brainTreeRouter);
 app.use("/api/order", orderRouter);
 app.use("/api/customize", customizeRouter);
 
+
+const corsOptions = {
+  origin: 'https://hayroo-oj9fdh8ok-karan-gargs-projects.vercel.app/', // Replace with your frontend domain
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
+  credentials: true, // Enable set cookie
+};
+
 // Run Server
 app.get('/',(req,res)=>{
   res.send("Adios, Working fine!")
