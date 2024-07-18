@@ -102,6 +102,7 @@ class Auth {
 
   /* User Login/Signin controller  */
   async postSignin(req, res) {
+    console.log("postSigniin route hit")
     let { email, password } = req.body;
     if (!email || !password) {
       return res.json({
