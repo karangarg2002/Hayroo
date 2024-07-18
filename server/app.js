@@ -74,6 +74,9 @@ app.use("/api/order", orderRouter);
 app.use("/api/customize", customizeRouter);
 
 // Run Server
+app.get('/',(req,res)=>{
+  res.send("Adios, Working fine!")
+})
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log("Server is running on ", PORT);
